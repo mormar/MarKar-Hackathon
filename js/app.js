@@ -33,6 +33,14 @@ function initMap() {
     icon: 'img/bin24.png'
   });
   marker.setMap(map);
+
+  const marker2 = new google.maps.Marker({
+    map: map,
+    draggable: false,
+    position: {lat: 54.493975, lng: 18.538514},
+    icon: 'img/bin24.png'
+  });
+  marker2.setMap(map);
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
