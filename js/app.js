@@ -55,7 +55,7 @@ $('#find-bin').click(function(e) {
     map: map,
     draggable: false,
     position: {lat: 54.496876, lng: 18.538165},
-    icon: 'img/bin24.png'
+    icon: 'img/bin64.png'
   });
   marker.setMap(map);
   console.log(marker.position);
@@ -63,7 +63,7 @@ $('#find-bin').click(function(e) {
     map: map,
     draggable: false,
     position: {lat: 54.493975, lng: 18.538514},
-    icon: 'img/bin24.png'
+    icon: 'img/bin64.png'
   });
   marker2.setMap(map);
   let travelMode = google.maps.TravelMode.WALKING;
@@ -76,7 +76,6 @@ $('#find-bin').click(function(e) {
   directionsService.route(request, function(response, status) {
         if (status == google.maps.DirectionsStatus.OK) {
             directionsDisplay.setDirections(response);
-            console.log(reponse);
         } else {
           console.log("error  " + status + "request dest: " + request.destination + "request ori: " + request.origin);
         }
