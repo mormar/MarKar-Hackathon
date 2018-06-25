@@ -9,7 +9,6 @@
     font-family: 'Righteous', cursive;
     font-size: 13rem;
     text-align: center;
-
 }
 
 p {
@@ -21,6 +20,7 @@ p {
     font-size: 8rem;
     padding: 2rem;
     margin: 5rem;
+    border: 10px;
 }
 
 .panel-to-bin {
@@ -45,4 +45,17 @@ p {
     font-size: 5rem;
  }
 
+.carousel-control {
+  width: 0%;
+}
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-next, .carousel-control .icon-prev {
+  font-size: 100px;
+  color: black;
+}
+
+.thumbnail {
+  border: 0px;
+}
 /*# sourceMappingURL=../css/style.map */

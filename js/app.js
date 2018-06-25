@@ -41,6 +41,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                         'Error: Your browser doesn\'t support geolocation.');
   infoWindow.open(map);
 }
+
 $('.carousel').carousel('cycle');
 
 $('#find-bin').click(function(e) {
