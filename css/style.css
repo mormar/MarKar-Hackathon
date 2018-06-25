@@ -1,8 +1,19 @@
 /* line 1, /Users/karolrosinski/Documents/MarKar-Hackathon/scss/style.scss */
 #map {
   width: 100%;
-  height: 75rem;
+  height: 125rem;
   background-color: grey;
+}
+
+.logo {
+  font-family: 'Righteous', cursive;
+  font-size: 8rem;
+  text-align: center;
+
+}
+
+p {
+  margin: 0;
 }
 
 /*# sourceMappingURL=../css/style.map */

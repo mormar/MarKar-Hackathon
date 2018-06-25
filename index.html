@@ -1,12 +1,79 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="css/lib/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <meta name="author" content="MarKar Marcin Mokrza Karol Rosiński">
+    <meta charset="utf-8">
   </head>
   <body>
-    <h3>Prototyp</h3>
-    <!--The div element for the map -->
-    <div id="map"></div>
+    <div class="container-fluid">
+      <section class="row">
+        <div class="logo">
+          <p><i class="fa fa-trash"></i> Do Kosza <i class="fa fa-trash"></i></p>
+        </div>
+        <div id="map"></div>
+      </section>
+    <!-- </div> -->
+      <section>
+        <div id=projectCarousel class="carousel slide"  data-interval="3000" data-pause="hover" data-wrap="true">
+
+          <ol class="carousel-indicators">
+            <li data-target="#projectCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#projectCarousel" data-slide-to="1"></li>
+            <li data-target="#projectCarousel" data-slide-to="2"></li>
+          </ol>
+
+          <div class="carousel-inner">
+
+            <div class="item active">
+              <div class="thumbnail">
+                <img src=img/misja.jpg width="800" alt="misja">
+                <div class="caption">
+                  <h3 class="textProjectTitle">Misja</h3>
+                  <p class="textProject">Uświadomienie ludzi jak bardzo szkodliwe jest pozostawianie śmieci w parkach, na plażach w lasach na chodniku. </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="thumbnail">
+                <img src=img/wizja.jpg width="800" alt="wizja">
+                <div class="caption">
+                  <h3 class="textProjectTitle">Wizja</h3>
+                    <p class="textProject">Środowisko naturalne wole od śmieci i zanieczyszczeń.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="thumbnail">
+                <img src=img/goal.jpg  width="800" alt="santa" id="santaHunter">
+                <div class="caption">
+                  <h3 class="textProjectTitle">Cel</h3>
+                  <p class="textProject">Stworzenie i rozwój oprogramowania promującego dbanie o środowisko naturalne.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <a class="left carousel-control" href="#projectCarousel" role="button" data-slide="prev">
+            <span class="icon-prev"></span>
+          </a>
+          <a class="right carousel-control" href="#projectCarousel" role="button" data-slide="next">
+            <span class="icon-next"></span>
+          </a>
+      </div>
+    </section>
+    </div>
+
+
+
+    <script type="text/javascript" src="js/lib/jquery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/lib/bootstrap/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClZADIpqBkX0bpaUCO-0ZnbO2JdeGUDV0&callback=initMap">
