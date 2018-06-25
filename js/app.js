@@ -1,4 +1,4 @@
-var map, infoWindow;
+var map, infoWindow, marker;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -34.397, lng: 150.644},
@@ -25,6 +25,14 @@ function initMap() {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
   }
+
+  const marker = new google.maps.Marker({
+    map: map,
+    draggable: false,
+    position: {lat: 54.496876, lng: 18.538165},
+    icon: 'img/bin24.png'
+  });
+  marker.setMap(map);
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
