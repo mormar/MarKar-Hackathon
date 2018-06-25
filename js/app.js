@@ -23,37 +23,6 @@ function initMap() {
       infoWindow.open(map);
       map.setCenter(pos);
 
-      const marker = new google.maps.Marker({
-        map: map,
-        draggable: false,
-        position: {lat: 54.496876, lng: 18.538165},
-        icon: 'img/bin24.png'
-      });
-      marker.setMap(map);
-
-      const marker2 = new google.maps.Marker({
-        map: map,
-        draggable: false,
-        position: {lat: 54.493975, lng: 18.538514},
-        icon: 'img/bin24.png'
-      });
-      marker2.setMap(map);
-
-      directionsDisplay.setMap(map)
-      let travelMode = google.maps.TravelMode.WALKING;
-      let request = {
-        origin: new google.maps.LatLng(pos.lat, pos.lng),
-        destination: new google.maps.LatLng(marker.position.lat, marker.position.lng),
-        travelMode: travelMode
-      }
-      directionsService.route(request, function(response, status) {
-            if (status == google.maps.DirectionsStatus.OK) {
-                directionsDisplay.setDirections(response);
-                console.log(reponse);
-            } else {
-              console.log("error  " + status);
-            }
-        });
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
     });
@@ -61,6 +30,7 @@ function initMap() {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
   }
+  directionsDisplay.setMap(map);
 
 }
 
@@ -72,3 +42,37 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.open(map);
 }
 $('.carousel').carousel('cycle');
+
+$('#find-bin').click(function(e) {
+  let markerPos = new google.maps.LatLng(54.496876, 18.538165);
+  const marker = new google.maps.Marker({
+    map: map,
+    draggable: false,
+    position: {lat: 54.496876, lng: 18.538165},
+    icon: 'img/bin24.png'
+  });
+  marker.setMap(map);
+  console.log(marker.position);
+  const marker2 = new google.maps.Marker({
+    map: map,
+    draggable: false,
+    position: {lat: 54.493975, lng: 18.538514},
+    icon: 'img/bin24.png'
+  });
+  marker2.setMap(map);
+  let travelMode = google.maps.TravelMode.WALKING;
+  let request = {
+    origin: new google.maps.LatLng(pos.lat, pos.lng),
+    destination: markerPos,
+    travelMode: travelMode
+  }
+
+  directionsService.route(request, function(response, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+            directionsDisplay.setDirections(response);
+            console.log(reponse);
+        } else {
+          console.log("error  " + status + "request dest: " + request.destination + "request ori: " + request.origin);
+        }
+    });
+});
