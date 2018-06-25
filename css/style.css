@@ -1,7 +1,7 @@
 /* line 1, /Users/karolrosinski/Documents/MarKar-Hackathon/scss/style.scss */
 #map {
     width: 100%;
-    height: 120rem;
+    height: 110rem;
     background-color: grey;
 }
 
@@ -19,6 +19,8 @@ p {
 .find-way-button {
     font-family: 'Righteous', cursive;
     font-size: 8rem;
+    padding: 2rem;
+    margin: 5rem;
 }
 
 .panel-to-bin {
@@ -28,6 +30,19 @@ p {
 .copyright {
     text-align: center;
     font-size: 5rem;
-  }
+    padding: 5rem;
+}
+
+.textProjectTitle {
+    text-align: center;
+    color: #000;
+    font-size: 10rem;
+}
+
+.textProject {
+    text-align: center;
+    color: #000;
+    font-size: 5rem;
+ }
 
 /*# sourceMappingURL=../css/style.map */
