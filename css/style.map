@@ -5,8 +5,8 @@
 		"../scss/style.scss"
 	],
 	"sourcesContent": [
-		""
+		".map-window {\n  width: 100%;\n  height: 75rem;\n  background-color: grey;\n}\n"
 	],
-	"mappings": "",
+	"mappings": ";AAAA,AAAA,WAAW,CAAC;EACV,KAAK,EAAE,IAAK;EACZ,MAAM,EAAE,KAAM;EACd,gBAAgB,EAAE,IAAK;CACxB",
 	"names": []
 }
