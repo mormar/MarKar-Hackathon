@@ -44,6 +44,11 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
 $('.carousel').carousel('cycle');
 
+$("#find-bin").hover(function(){
+      $(this).css({"background-color":"black"});
+  });
+  //TODO: ODKLIKNIJ  TO
+
 $('#find-bin').click(function(e) {
   let markerPos = new google.maps.LatLng(54.496876, 18.538165);
   const marker = new google.maps.Marker({
