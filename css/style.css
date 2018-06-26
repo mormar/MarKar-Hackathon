@@ -18,7 +18,6 @@ p {
 .find-way-button {
     font-family: 'Righteous', cursive;
     font-size: 8rem;
-    padding: 2rem;
     margin: 5rem;
     border: 10px;
 }
@@ -47,6 +46,10 @@ p {
 
 .carousel-control {
   width: 0%;
+}
+
+.carousel {
+  padding-top: 3rem;
 }
 
 .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right,
